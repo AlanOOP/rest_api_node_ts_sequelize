@@ -1,16 +1,13 @@
 import { Sequelize } from "sequelize-typescript";
 import dotenv from 'dotenv';
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
-
-
-
+import { join } from 'path';
 
 
 dotenv.config()
 
 const db = new Sequelize(process.env.DATABASE_URL!, {
-    models: [join(__dirname, '../models/*.ts')]
+    models: [join(__dirname, '../models/*')],
+    logging: false
 })
 
 export default db;
