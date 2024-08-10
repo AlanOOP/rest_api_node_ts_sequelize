@@ -17,9 +17,9 @@ async function connectDB(): Promise<void> {
     try {
         await db.authenticate();
         db.sync();
-        // console.log('Conexión exitosa a la base de datos ✅✅✅✅')
+        console.log('Conexión exitosa a la base de datos ✅✅✅✅')
     } catch (error) {
-        // console.log('Hubo en error ')
+        console.log('Hubo en error ')
     }
 }
 
